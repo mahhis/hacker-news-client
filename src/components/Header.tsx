@@ -54,7 +54,7 @@ export default function MenuAppBar() {
     </List>
     <Divider />
     <List>
-      {['Ask', 'Show', 'Job stories'].map((text) => (
+      {['Ask HN', 'Show HN', 'Job stories'].map((text) => (
         <ListItem key={text} disablePadding>
           <ListItemButton  onClick={() => handleTopicChange(text)}>
           <ListItemText primary={text} />
@@ -68,31 +68,30 @@ export default function MenuAppBar() {
   return (
     <Box  sx={{ flexGrow: 1, marginBottom: '12%' }}>
       <AppBar  sx={{ borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px' }}>
-        <Toolbar sx={{}}>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={toggleDrawer(true)}
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          {topic.fullName} on Hacker News
-          </Typography>
-          <Drawer open={open} onClose={toggleDrawer(false)}>
-            {DrawerList}
-          </Drawer>
-          {isStory && 
+        <Toolbar>
+        {isStory && 
           <Link to={`/`} onClick={() => setIsStory(false)}>
 
-          <Button color="inherit" sx={{ minWidth: '0px', padding: '0' }}>
+          <Button color="inherit" sx={{ paddingLeft: '0', minWidth: '0'}}>
             <KeyboardArrowLeftIcon />
           </Button>
           </Link>
           }
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          {topic.fullName}
+          </Typography>
+          <Drawer anchor={"right"} open={open} onClose={toggleDrawer(false)}>
+            {DrawerList}
+          </Drawer>  
+           <IconButton
+            size="large"
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            onClick={toggleDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Box>
