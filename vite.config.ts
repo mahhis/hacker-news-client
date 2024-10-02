@@ -29,17 +29,13 @@ export default defineConfig({
     // },
     // host: '0.0.0.0', // Ensure server listens on all network interfaces
  // },
-  server: {
-    https: {
-      key: fs.readFileSync('/etc/ssl/private/private.key'), // Your private key>
-      cert: fs.readFileSync('/etc/ssl/certificate.crt'), // Your certificate pa>
-      ca: fs.readFileSync('/etc/ssl/ca_bundle.crt'), // Your CA bundle path
-      // key: fs.readFileSync(path.resolve(__dirname, '/etc/ssl/fe1p.com/private.key')),
-      // cert: fs.readFileSync(path.resolve(__dirname, '/etc/ssl/fe1p.com/certificate.crt')),
-      // ca: fs.readFileSync('/etc/ssl/fe1p.com/ca_bundle.crt'), // Your CA bundle path
-
-    },  // Enable HTTPS
-    host: '0.0.0.0', // Ensure Vite listens on all network interfaces
+ server: {
+  https: {
+    key: fs.readFileSync(path.resolve(__dirname, 'ssl/private/private.key')), // Update path
+    cert: fs.readFileSync(path.resolve(__dirname, 'ssl/certificate.crt')), // Update path
+    ca: fs.readFileSync(path.resolve(__dirname, 'ssl/ca_bundle.crt')), // Update path
   },
+  host: '0.0.0.0',
+},
 
 })
