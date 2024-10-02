@@ -29,13 +29,13 @@ export default defineConfig({
     // },
     // host: '0.0.0.0', // Ensure server listens on all network interfaces
  // },
- server: {
-  https: {
-    key: fs.readFileSync(path.resolve(__dirname, 'ssl/private/private.key')), // Update path
-    cert: fs.readFileSync(path.resolve(__dirname, 'ssl/certificate.crt')), // Update path
-    ca: fs.readFileSync(path.resolve(__dirname, 'ssl/ca_bundle.crt')), // Update path
-  },
-  host: '0.0.0.0',
-},
+    // server: {
+    //   https: {
+    //     key: fs.readFileSync(path.resolve(__dirname, 'ssl/private/private.key')), // Update path
+    //     cert: fs.readFileSync(path.resolve(__dirname, 'ssl/certificate.crt')), // Update path
+    //     ca: fs.readFileSync(path.resolve(__dirname, 'ssl/ca_bundle.crt')), // Update path
+    //   },
+    //   host: '0.0.0.0',
+    // },
 
 })

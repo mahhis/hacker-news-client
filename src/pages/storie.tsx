@@ -107,7 +107,8 @@ export default function Storie() {
   if (!story) return null
 
   return (
-    <Card sx={{ maxWidth: '100%'}}>
+    <Box sx={{ padding: 1 }}>
+    <Card sx={{ maxWidth: '100%', marginBottom: '2%', border: '1px solid black' }}>
       <CardContent>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           {new Date(story.time * 1000).toLocaleString()} by {story.by} 
@@ -134,13 +135,14 @@ export default function Storie() {
           )}
         </Typography>
       </CardContent>
+      </Card>
       {story.kids && story.kids.length > 0 && (
-        <Box sx={{ padding: 1  }}>
+        <Box >
           {story.kids.map((kidId: number) => (
             <Comment key={kidId} commentId={kidId} />
           ))}
         </Box>
       )}
-    </Card>
+    </Box>
   );
 }
