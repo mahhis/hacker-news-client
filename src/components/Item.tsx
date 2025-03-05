@@ -51,7 +51,6 @@ export default function Item({ id }: { id: number }) {
       try {
         const storyData: Item[] = await getStory(id);
         setStory(storyData);
-        console.log(storyData)
       } catch (err) {
         setError('Failed to fetch story');
       } finally {
