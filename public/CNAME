@@ -1,2 +1,0 @@
-google.com
-ca: fs.readFileSync(path.resolve(__dirname, '/home/bruh/ssl-certs/ca_bundle.crt')),
