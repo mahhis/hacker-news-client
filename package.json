@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
+  "homepage": "https://mahhis.github.io/hacker-news-client",
   "scripts": {
     "start": "vite",
     "build": "cross-env NODE_ENV=production tsc && vite build",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "yarn build",
     "pretty": "prettier --check src",
     "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src",
     "preview": "yarn build && yarn vite preview"
@@ -28,6 +31,7 @@
     "@preact/preset-vite": "^2.8.2",
     "@tailwindcss/typography": "^0.5.13",
     "@types/dompurify": "^3",
+    "@types/gh-pages": "^6",
     "@types/node": "^20.12.12",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
@@ -43,6 +47,7 @@
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "rollup-plugin-visualizer": "^5.12.0",

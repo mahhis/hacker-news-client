@@ -40,12 +40,8 @@ To install and run the application, follow these steps:
 
 - **Frontend Framework**: Preact
 - **UI Components**: Material-UI
-- **Routing**: Wouter
-- **State Management**: Jotai
-- **Styling**: Tailwind CSS
 - **Build Tool**: Vite
-- **Type Checking**: TypeScript
-- **Code Quality**: ESLint, Prettier
+
 
 ## Project Structure
 
