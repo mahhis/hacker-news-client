@@ -16,14 +16,10 @@ export default function Top() {
   const [topic] = useAtom(currentTopicAtom)
   const [offset, setOffset] = useState(30)
 
-
-  console.log(topic)
-
   useEffect(() => {
     const fetchStories = async () => {
       setIsLoading(true)
       try {
-        console.log(topic)
         const stories = await getItemsByTopic(topic.shortName)
         setIdsCurrentItems(stories)
         setDisplayedItems(stories.slice(0, 30)) 

@@ -67,7 +67,7 @@ export default function Item({ id }: { id: number }) {
   return (
     <Card sx={{ maxWidth: '100%', marginBottom: '2%', border: '1px solid black' }}>
       <CardContent>
-      <Link to={`/${story.id}`} onClick={() => setIsStory(true)}>
+      <Link to={`/hacker-news-client/${story.id}`} onClick={() => setIsStory(true)}>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           {new Date(story.time * 1000).toLocaleString()} by {story.by} 
           </Typography>

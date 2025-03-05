@@ -37,7 +37,7 @@ export default function MenuAppBar() {
       shortName: newTopic.split(' ')[0].toLowerCase()
     }
     );
-    setLocation("/");
+    setLocation("/hacker-news-client/");
     setIsStory(false)
   };
 
@@ -70,7 +70,7 @@ export default function MenuAppBar() {
       <AppBar  sx={{ borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px' }}>
         <Toolbar>
         {isStory && 
-          <Link to={`/`} onClick={() => setIsStory(false)}>
+          <Link to={`/hacker-news-client/`} onClick={() => setIsStory(false)}>
 
           <Button color="inherit" sx={{ paddingLeft: '0', minWidth: '0'}}>
             <KeyboardArrowLeftIcon />

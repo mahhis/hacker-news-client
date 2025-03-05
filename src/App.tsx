@@ -9,9 +9,10 @@ export default function () {
     <div className="container mx-auto">
       <Suspense fallback={<p>Loading...</p>}>
         <Header />
-        <Switch>
-           <Route path="/" component={Feed} />
-           <Route path="/:id" component={Storie} />
+        <Switch >
+           {/* /hacker-news-client/ this line is necessary for the correct operation of the project on the github page */}
+           <Route path="/hacker-news-client/" component={Feed} />
+           <Route path="/hacker-news-client/:id" component={Storie} />
         </Switch>
       </Suspense>
     </div>
